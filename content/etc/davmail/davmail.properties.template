@@ -108,14 +108,10 @@ davmail.logFilePath=/dev/null
 #davmail.logFileSize=1MB
 davmail.logFileSize=0
 # log levels
-log4j.logger.davmail=WARN, default.out
-log4j.logger.httpclient.wire=WARN, default.out
-log4j.logger.org.apache.commons.httpclient=WARN, default.out
-log4j.rootLogger=WARN, default.out
-log4j.appender.default.out=org.apache.log4j.ConsoleAppender
-log4j.appender.default.out.threshold=INFO
-log4j.appender.default.out.layout=org.apache.log4j.PatternLayout
-log4j.appender.default.out.layout.ConversionPattern=%-5p %c: %m%n
+log4j.logger.davmail=INFO
+log4j.logger.httpclient.wire=WARN
+log4j.logger.org.apache.commons.httpclient=WARN
+log4j.rootLogger=WARN
 
 #############################################################
 # Workstation only settings
