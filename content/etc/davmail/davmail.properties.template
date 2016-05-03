@@ -39,10 +39,10 @@ davmail.bindAddress=
 davmail.clientSoTimeout=
 
 # DavMail listeners SSL configuration
-davmail.ssl.keystoreType=
-davmail.ssl.keystoreFile=
-davmail.ssl.keystorePass=
-davmail.ssl.keyPass=
+davmail.ssl.keystoreType=${DAVMAIL_SSL_PASS:+PKCS12}
+davmail.ssl.keystoreFile=${DAVMAIL_SSL_PASS:+/etc/davmail/davmail.p12}
+davmail.ssl.keystorePass=${DAVMAIL_SSL_PASS}
+davmail.ssl.keyPass=${DAVMAIL_SSL_PASS}
 
 # Accept specified certificate even if invalid according to trust store
 davmail.server.certificate.hash=${DAVMAIL_SERVER_CERTIFICATE_HASH}

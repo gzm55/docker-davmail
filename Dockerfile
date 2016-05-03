@@ -17,6 +17,9 @@ RUN apk --update upgrade && \
 
 USER davmail
 
+# if $DAVMAIL_SSL_PASS is not empty, use this file as keystoreFile of type PKCS12
+VOLUME ["/etc/davmail/davmail.p12"]
+
 EXPOSE     1080
 EXPOSE     1143
 EXPOSE     1389

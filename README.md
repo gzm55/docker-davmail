@@ -18,6 +18,7 @@ Accepted docker environment variables:
 * DAVMAIL_SERVER_CERTIFICATE_HASH: optional, cirtificate hash, like 11:22:...
 * DAVMAIL_NTLM_DOMAIN: optional, windows domain
 * DAVMAIL_CONFIG_URL: a url for downloading a specific configuration, this can override all other options
+* DAVMAIL_SSL_PASS: optional, set to the password of a PKCS12 SSL file
 
 Listened ports:
 
@@ -26,3 +27,7 @@ Listened ports:
 * ldap port:   1389
 * pop3 port:   1110
 * smtp port:   1025
+
+Volume:
+
+* "/etc/davmail/davmail.p12": if DAVMAIL_SSL_PASS is not empty, use this as the keystore file of type PKCS12
