@@ -3,14 +3,6 @@
 A EWS proxy in docker. Run it like this:
 
 ```Bash
-VPN_SERVER=<server-domain-or-ip>
-VPN_USER=<user>
-VPN_PASSWORD=<password>
-VPN_ROUTING_IPS="172.0.0.0/8 www.google.com"
-#VPN_PPP_OPTIONS=
-#VPN_DEBUG=y
-
-```Bash
 docker run --net=host \
            --name davmail \
            -e DAVMAIL_URL=<url> \
