@@ -23,10 +23,10 @@ Accepted docker environment variables:
 Listened ports:
 
 * caldav port: 1080
-* imap port:   1143
-* ldap port:   1389
-* pop3 port:   1110
-* smtp port:   1025
+* imap port:   993
+* ldap port:   636
+* pop3 port:   995
+* smtp port:   587
 
 Volume:
 
