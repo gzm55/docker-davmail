@@ -12,10 +12,10 @@ davmail.url=${DAVMAIL_URL}
 
 # Listener ports
 davmail.caldavPort=1080
-davmail.imapPort=993
-davmail.ldapPort=636
-davmail.popPort=995
-davmail.smtpPort=587
+davmail.imapPort=1993
+davmail.ldapPort=1636
+davmail.popPort=1995
+davmail.smtpPort=1587
 
 #############################################################
 # Network settings

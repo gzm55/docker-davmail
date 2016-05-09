@@ -22,10 +22,10 @@ USER davmail
 VOLUME ["/etc/davmail/davmail.p12"]
 
 EXPOSE     1080
-EXPOSE     993
-EXPOSE     636
-EXPOSE     995
-EXPOSE     587
+EXPOSE     1993
+EXPOSE     1636
+EXPOSE     1995
+EXPOSE     1587
 
 WORKDIR    /opt/davmail
 ENTRYPOINT ["/opt/davmail/entrypoint.sh"]
