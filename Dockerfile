@@ -7,13 +7,14 @@ COPY content /
 
 # untar file, add a non-root system user
 # note we specify a id so as to *try* to avoid collisions on the host
-RUN apk --update upgrade && \
-    cd /opt && \
-    tar -xzv -f davmail-linux-x86_64-4.7.2-2427.tgz && \
-    mv /opt/davmail-*/* /opt/davmail/ && \
-    rm -rf /var/cache/apk/* /tmp/* /opt/davmail-* && \
-    adduser -S -u 500 -h /var/lib/davmail davmail && \
-    chmod 0644 /etc/davmail/*
+RUN set -ex \
+    && apk --update --no-progress upgrade \
+    && cd /opt \
+    && tar -xzv -f davmail-linux-x86_64-4.7.2-2427.tgz \
+    && mv /opt/davmail-*/* /opt/davmail/ \
+    && rm -rf /var/cache/apk/* /tmp/* /opt/davmail-* \
+    && adduser -S -u 500 -h /var/lib/davmail davmail \
+    && chmod 0644 /etc/davmail/*
 
 USER davmail
 
@@ -21,9 +22,10 @@ USER davmail
 VOLUME ["/etc/davmail/davmail.p12"]
 
 EXPOSE     1080
-EXPOSE     1143
-EXPOSE     1389
-EXPOSE     1110
-EXPOSE     1025
+EXPOSE     993
+EXPOSE     636
+EXPOSE     995
+EXPOSE     587
+
 WORKDIR    /opt/davmail
 ENTRYPOINT ["/opt/davmail/entrypoint.sh"]
