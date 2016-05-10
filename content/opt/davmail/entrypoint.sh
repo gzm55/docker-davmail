@@ -20,6 +20,8 @@ if [ -n "$DAVMAIL_SSL_PASS" ]; then
   fi
 fi
 
+unset DAVMAIL_SSL_PASS
+
 if [ -r "$CONFIG" ]; then
   exec /opt/davmail/davmail.sh "$CONFIG"
 else
