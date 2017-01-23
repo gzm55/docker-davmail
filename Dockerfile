@@ -10,7 +10,7 @@ COPY content /
 RUN set -ex \
     && apk --update --no-progress upgrade \
     && cd /opt \
-    && tar -xzv -f davmail-linux-x86_64-4.7.2-2427.tgz \
+    && tar -xzv -f davmail-linux-x86_64-4.7.3-2438.tgz \
     && mv /opt/davmail-*/* /opt/davmail/ \
     && rm -rf /var/cache/apk/* /tmp/* /opt/davmail-* \
     && adduser -S -u 500 -h /var/lib/davmail davmail \
