@@ -2,7 +2,7 @@ FROM jeanblanchard/java:8
 MAINTAINER James Z.M. Gao <gaozm55@gmail.com>
 
 # Download
-ADD http://downloads.sourceforge.net/project/davmail/davmail/4.7.2/davmail-linux-x86_64-4.7.2-2427.tgz /opt/
+ADD http://downloads.sourceforge.net/project/davmail/davmail/4.7.3/davmail-linux-x86_64-4.7.3-2438.tgz /opt/
 COPY content /
 
 # untar file, add a non-root system user
