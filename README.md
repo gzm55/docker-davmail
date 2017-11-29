@@ -9,7 +9,7 @@ docker run --net=host \
            -e DAVMAIL_SERVER_CERTIFICATE_HASH=<optional-certificate-hash>
            -e DAVMAIL_NTLM_DOMAIN=<optional-windows-domain>
            -d \
-           gzm55/pptp-client
+           gzm55/davmail
 ```
 
 Accepted docker environment variables:
