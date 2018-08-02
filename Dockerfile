@@ -2,7 +2,7 @@ FROM jeanblanchard/java:8
 MAINTAINER James Z.M. Gao <gaozm55@gmail.com>
 
 # Download
-ADD http://downloads.sourceforge.net/project/davmail/davmail/4.7.3/davmail-linux-x86_64-4.7.3-2438.tgz /opt/
+ADD http://downloads.sourceforge.net/project/davmail/davmail/4.8.4/davmail-linux-x86_64-4.8.4-2570.tgz /opt/
 COPY content /
 
 # untar file, add a non-root system user
@@ -10,7 +10,7 @@ COPY content /
 RUN set -ex \
     && apk --update --no-progress upgrade \
     && cd /opt \
-    && tar -xzv -f davmail-linux-x86_64-4.7.3-2438.tgz \
+    && tar -xzv -f davmail-linux-x86_64-4.8.4-2570.tgz \
     && mv /opt/davmail-*/* /opt/davmail/ \
     && rm -rf /var/cache/apk/* /tmp/* /opt/davmail-* \
     && adduser -S -u 500 -h /var/lib/davmail davmail \
