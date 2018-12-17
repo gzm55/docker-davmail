@@ -23,7 +23,7 @@ fi
 unset DAVMAIL_SSL_PASS
 
 if [ -r "$CONFIG" ]; then
-  exec /opt/davmail/davmail.sh "$CONFIG"
+  exec /opt/davmail/davmail "$CONFIG"
 else
   echo "ERROR: can't read [$CONFIG]!"
   return 1
