@@ -1,8 +1,8 @@
 FROM jeanblanchard/java:8
-MAINTAINER James Z.M. Gao <gaozm55@gmail.com>
+LABEL maintainer="James Z.M. Gao <gaozm55@gmail.com>"
 
 # Download
-ADD http://downloads.sourceforge.net/project/davmail/davmail/5.0.0/davmail-5.0.0-2801.zip /opt/
+ADD http://downloads.sourceforge.net/project/davmail/davmail/5.1.0/davmail-5.1.0-2891.zip /opt/
 COPY content /
 
 # untar file, add a non-root system user
@@ -11,7 +11,7 @@ RUN set -ex \
     && apk --update --no-progress upgrade \
     && cd /opt \
     && mkdir -p davmail \
-    && unzip davmail-5.0.0-2801.zip -d davmail \
+    && unzip davmail-5.1.0-2891.zip -d davmail \
     && rm -rf /var/cache/apk/* /tmp/* /opt/davmail-* \
     && adduser -S -u 500 -h /var/lib/davmail davmail \
     && chmod 0644 /etc/davmail/*
