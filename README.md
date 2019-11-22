@@ -14,6 +14,7 @@ docker run --net=host \
 
 Accepted docker environment variables:
 
+* DAVMAIL_MODE: connection mode auto, EWS or WebDav, default is EWS
 * DAVMAIL_URL: server domain or ip
 * DAVMAIL_SERVER_CERTIFICATE_HASH: optional, cirtificate hash, like 11:22:...
 * DAVMAIL_NTLM_DOMAIN: optional, windows domain

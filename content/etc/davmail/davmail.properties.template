@@ -7,6 +7,7 @@
 davmail.server=true
 # connection mode auto, EWS or WebDav
 davmail.enableEws=auto
+davmail.mode="${DAVMAIL_MODE:-EWS}"
 # base Exchange OWA or EWS url
 davmail.url=${DAVMAIL_URL}
 
@@ -71,6 +72,8 @@ davmail.defaultDomain=${DAVMAIL_NTLM_DOMAIN}
 davmail.caldavAlarmSound=
 # retrieve calendar events not older than 90 days
 davmail.caldavPastDelay=90
+# EWS only: enable server managed meeting notifications
+davmail.caldavAutoSchedule=true
 # WebDav only: force event update to trigger ActiveSync clients update
 davmail.forceActiveSyncUpdate=false
 
@@ -81,6 +84,8 @@ davmail.forceActiveSyncUpdate=false
 davmail.imapAutoExpunge=true
 # Enable IDLE support, set polling delay in minutes
 davmail.imapIdleDelay=
+# Always reply to IMAP RFC822.SIZE requests with Exchange approximate message size for performance reasons
+davmail.imapAlwaysApproxMsgSize=
 
 #############################################################
 # POP settings
