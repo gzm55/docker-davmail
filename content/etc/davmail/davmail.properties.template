@@ -131,9 +131,11 @@ davmail.ssl.clientKeystoreFile=
 davmail.ssl.clientKeystorePass=
 
 # disable all balloon notifications
-davmail.disableGuiNotifications=false
+davmail.disableGuiNotifications=true
+# disable tray icon color switch on activity
+davmail.disableTrayActivitySwitch=true
 # disable startup balloon notifications
-davmail.showStartupBanner=true
+davmail.showStartupBanner=false
 
 # enable transparent client Kerberos authentication
 davmail.enableKerberos=false

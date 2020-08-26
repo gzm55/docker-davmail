@@ -2,7 +2,7 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 LABEL maintainer="James Z.M. Gao <gaozm55@gmail.com>"
 
 # Download
-ADD https://downloads.sourceforge.net/project/davmail/davmail/5.4.0/davmail-5.4.0-3135.zip /opt/
+ADD https://downloads.sourceforge.net/project/davmail/davmail/5.5.1/davmail-5.5.1-3299.zip /opt/
 COPY content /
 
 # untar file, add a non-root system user
@@ -11,7 +11,7 @@ RUN set -ex \
     && apk --update --no-progress upgrade \
     && cd /opt \
     && mkdir -p davmail \
-    && unzip davmail-5.4.0-3135.zip -d davmail \
+    && unzip davmail-*.zip -d davmail \
     && rm -rf /var/cache/apk/* /tmp/* /opt/davmail-* \
     && adduser -S -u 500 -h /var/lib/davmail davmail \
     && chmod 0644 /etc/davmail/*
